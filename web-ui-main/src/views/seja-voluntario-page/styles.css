@@ -1,0 +1,143 @@
+body {
+  background-image: url("../../../assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+main {
+  display: flex;
+  padding-top: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.background-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+  background: none;
+  padding: 20px 5%;
+
+  img {
+    height: 70vh;
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgb(248, 248, 248);
+  box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 50px;
+  width: 50%;
+  z-index: 1;
+
+  .abmcd {
+    font-weight: bold;
+    color: rgb(128, 176, 238);
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .card-description {
+    width: 80%;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .button-fale-conosco {
+    font-family: sans-serif;
+    text-decoration: none;
+    background-color: #01aef2;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 30px;
+    padding: 13px 30px;
+    border: none;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.1s;
+    transition: background-color 0.6s;
+    transition: color 0.6s;
+  }
+
+  .button-fale-conosco:active {
+    cursor: grab;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .button-fale-conosco:hover {
+    background-color: rgba(155, 155, 155, 0.129);
+    color: #01aef2;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 50%;
+
+    .card-title {
+      width: 100%;
+      font-size: 18px;
+    }
+
+    .card-description {
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+
+  .background-images {
+    flex-direction: row;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 0;
+
+    img {
+      height: 300px;
+      width: 35%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    background-size: cover;
+    height: 100vh;
+    justify-content: start;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .background-images {
+    display: none;
+  }
+}
